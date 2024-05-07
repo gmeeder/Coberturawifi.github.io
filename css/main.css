@@ -1,0 +1,389 @@
+span {
+	display:inline-block;vertical-align:top;margin-top:10px;margin-left:10px;
+}
+
+li {
+	margin-top: 15px; margin-right: 5px; margin-bottom: -5px;
+} 
+
+
+.tooltip_copy {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip_copy .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #5B7EBE;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip_copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #5B7EBE transparent transparent transparent;
+}
+
+.tooltip_copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.btn_copy:hover{
+  cursor: pointer !important;
+  text-decoration: none;
+}
+
+.code_copy{
+  opacity: .01;
+  height:0;
+  position:absolute;
+  z-index: -1;
+}
+
+.btn-bg-equipos{
+  background: rgb(0,229,255);
+  background: linear-gradient(90deg, rgba(0,229,255,1) 10%, rgba(18,0,255,1) 100%);
+}
+
+.btn-bg-equipos-sm{
+  background: #1200FF !important;
+  color: #ffffff !important;
+  width: 100%;
+}
+
+.btn-bg-residencial{
+  background: rgb(255,229,59);
+  background: linear-gradient(90deg, rgba(255,229,59,1) 10%, rgba(0,255,255,1) 100%);
+}
+
+.btn-bg-residencial-sm{
+  background: #00FFFF !important;
+  color: #ffffff !important;
+  width: 100%;
+}
+
+.btn-bg-negocio{
+  background: rgb(0,225,253);
+  background: linear-gradient(90deg, rgba(0,225,253,1) 10%, rgba(252,0,122,1) 100%);
+}
+
+.btn-bg-negocio-sm{
+ background: #FC007A !important;
+  color: #ffffff !important;
+  width: 100%;
+}
+
+.btn-color-white{
+  color: #ffffff !important;
+}
+
+.btn-telsur{
+  border: 0 !important;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.fixed-navbar{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+
+.rightbar{
+  width: 200px;
+  position: fixed; 
+  background-color: red;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: scroll;
+  right: 0;
+  top: 100px;
+}
+
+
+.leftbar{
+  width: 200px;
+  position: fixed; 
+  background-color: #ffffff;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: scroll;
+}
+
+.margin-top-bottom{
+  margin-top: 10px;
+  margin-top: 10px;
+}
+
+.main-wrapper{
+  margin-left: 200px;
+  min-width: 768px;
+}
+
+#marca {
+	margin-top: 0px; margin-right: 5px; margin-bottom: -5px;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+.action-container{
+  margin-top: 15px;
+}
+
+.btn {
+	margin-bottom: 5px;
+}
+
+.navbar { 
+	margin-bottom: 0px;
+}
+
+#anchoA{
+  padding: 3px 0px; 
+  margin: 1px 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#anchoB{
+  padding: 3px 0px; 
+  margin: 1px 0px;
+  justify-content: center;
+  text-align: center;
+}
+
+#anchoC{
+  padding: 3px 0px;
+  justify-content: right;
+  text-align: center;
+}
+
+#btnMesh{
+
+	background: rgb(101, 31, 255);
+}
+
+#btnZona{
+
+  background: rgb(101, 31, 255);
+}
+
+#btnZona5{
+
+  background: rgb(101, 31, 255);
+}
+
+#btnAutoOficinaBanoA{
+
+  background: rgb(244, 67, 54);
+}
+
+#btnAutoOficinaBanoB{
+
+  background: rgb(244, 67, 54);
+}
+
+
+#btnAutoOficinaCubiculoA{
+
+  background: rgb(244, 67, 54);
+}
+
+
+#btnAutoOficinaCubiculoB{
+
+  background: rgb(244, 67, 54);
+}
+
+
+#btnAutoOficinaLiving{
+
+  background: rgb(244, 67, 54);
+}
+
+
+#btnAutoOficinaPasillo{
+
+  background: rgb(244, 67, 54);
+}
+
+
+#btnAutoOficinaSalaDeReuniones{
+
+  background: rgb(244, 67, 54);
+}
+
+
+/* Bootstrap overwriter */
+
+.panel{
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.panel-heading{
+  padding: 0 !important;
+}
+
+.panel-default>.panel-heading{
+  background-color: #ffffff !important;
+  border: none !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body{
+  border-top: none !important;
+}
+
+.navbar-default{
+  background-color: #ffffff;
+}
+
+
+.gauge g.arc {
+  fill: #282828;
+}
+
+.gauge g.pointer {
+  fill: #282828;
+  stroke: #000000;
+}
+
+.gauge g.label text {
+  text-anchor: middle;
+  font-size: 13px;
+  fill: #282828;
+}
+
+.icons-info-chart{
+  text-align: center;
+}
+
+.icons-info-chart i{
+  font-size: 20px;
+}
+
+.icons-info-chart p{
+  color: #6E6E6E;
+  font-size: 13px;
+}
+
+.info-state-wifi span{
+  font-weight: bold;
+  display: inline;
+  margin: 0;
+}
+
+.info-state-wifi span{
+  font-size: 12px;
+}
+
+.info-state-wifi i{
+  padding-top: 5px;
+  font-size: 24px;
+}
+
+.info-state-wifi .warr{
+  font-weight: bold;
+  color: red;
+}
+
+.media {
+    margin-top: -5px;
+  }
+
+
+.title-chart h5{
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title-chart .green:after{
+    display: block;
+    content: '';
+    border-bottom: solid 3px #7DB828;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.title-chart .yellow:after{
+    display: block;
+    content: '';
+    border-bottom: solid 3px #FFE53B;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.title-chart .gray:after{
+    display: block;
+    content: '';
+    border-bottom: solid 3px #6E6E6E;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.div-main{
+  padding-right: 0 !important;
+}
+
+.chart-rightbar{
+  margin-bottom: 20px;
+  display: block;
+}
+
+.gauge svg{
+    margin: 0 auto;
+    display: block;
+}
+
+.chart-div-green{
+  height: 315px;
+}
+
+.chart-div-yellow{
+  height: 265px;
+}
+
+.chart-div-gray{
+  height: 350px;
+}
+
+
+.bar-right{
+  height:100%; 
+  position:fixed; 
+  overflow: scroll; 
+  padding-bottom: 40px;
+  padding-right: 15px;
+}
+
+

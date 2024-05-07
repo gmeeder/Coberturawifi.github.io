@@ -1,0 +1,319 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Planos de cobertura WIFI PC</title>
+    
+    <link type="text/css" href="scr/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+    <link type="text/css" href="css/custom-select.css" rel="stylesheet" />
+    <link type="text/css" href="css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div id="navbar-1" style="float: left;margin-right: 51px;">
+                <a style="margin-left: 35px;"><img src="img/logo2.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <input id="btnBorrar" class="btn btn-danger btn-sm" type="button" value="Borrar">
+                    <input id="btnBorrarTodo" class="btn btn-danger btn-sm" type="button" value="Borrar Todo">
+                    <input id="btnCalcular" class="btn btn-info btn-sm" type="button" value="Calcular">
+                    <input id="btnGuardar" class="btn btn-primary btn-sm" type="button" value="Guardar">
+                    <a class="btn btn-success btn-sm" href="mailto:" target="_blank" rel="noopener noreferrer">Enviar Correo</a> 
+                    <button id="export-canvas" type="button" class="btn btn-primary btn-sm">
+                      Exportar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalCanvas" tabindex="-1" role="dialog" aria-labelledby="modalcanv">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalcanv">Exportar canvas</h4>
+      </div>
+      <div id="main_canvas_export" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="leftbar">
+        
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <img data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" src="img/equipos.png" alt="" class="img-responsive">
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <button class="btn-telsur btn-bg-equipos btn-color-white text-center">
+                            Equipos
+                        </button>
+                        <input id="btnMesh" class="btn btn-sm btn-bg-equipos-sm" type="button" value="+ AP Mesh">
+                        <input id="btnZona" class="btn btn-sm btn-bg-equipos-sm" type="button" value="+ ONT">
+                        <input id="btnZona5" class="btn btn-sm btn-bg-equipos-sm" type="button" value="+ AP HiSpeed">   
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <img src="img/residencial.png" alt="" class="img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <button class="btn-telsur btn-bg-residencial btn-color-white text-center">
+                            Residencial
+                        </button>
+                        <input id="btnComedor" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+Comedor">
+                        <input id="btnCocina" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+ Cocina">
+                        <input id="btnCocinaB" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+ Cocina B">
+                        <input id="btnBano" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+ Baño">
+                        <input id="btnCasaSimpsonPisoBBanoA" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+ Baño A">
+                        <input id="btnCasaSimpsonPisoBBanoB" class="btn btn-bg-residencial-sm btn-sm" type="button" value="+ Baño B">
+                        <input id="btnCasaSimpsonPisoBPiezaA" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio A">
+                        <input id="btnCasaSimpsonPisoBPiezaB" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio B">
+                                <input id="btnCasaSimpsonPisoBPiezaC" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio C">
+                                <input id="btnCasaSimpsonPisoBPiezaD" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio D">
+                               <input id="btnCasaSimpsonPisoBPiezaE" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio E">
+                                <input id="btnCasaSimpsonPisoBPiezaF" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio F">
+                                 <input id="btnCasaSimpsonPisoBPiezaG" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + Dormitorio G">
+                        <input id="btnEntrePiso" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + EntrePiso A">
+                        <input id="btnEntrePisoB" class="btn btn-bg-residencial-sm btn-sm" type="button" value=" + EntrePiso B">                                               
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <img src="img/negocio.png" alt="" class="img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <button class="btn-telsur btn-bg-negocio btn-color-white text-center">
+                            Negocios
+                        </button>
+                        <input id="btnCoworkCOWORK1H3" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Cocina">
+                        <input id="btnCoworkCOWORK1H1" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Cental 1">
+                        <input id="btnCowork2COWORK2H2" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Cental 2"> 
+                        <input id="btnCowork3COWORK3H1" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Cental 3">   
+                        <input id="btnCowork2COWORK2H0" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesas Dobles">
+                        <input id="btnCowork2COWORK2H3" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ 4 mesas">
+                        <input id="btnCowork2COWORK2H7" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Sala estar">                      
+                        <input id="btnCoworkCOWORK1H2" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Pasillo 1">
+                        <input id="btnCowork2COWORK2H1" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Pasillo 2">
+                        <input id="btnCowork3COWORK3H3" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesa Horizontal">
+                        <input id="btnCoworkCOWORK1H4" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesa Vertical 1">
+                        <input id="btnCoworkCOWORK1H5" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesa Vertical 2">
+                        <input id="btnCoworkCOWORK1H7" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesa Vertical 3">
+                        <input id="btnCoworkCOWORK1H8" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Mesa Vertical 4">
+                        <input id="btnCoworkCOWORK1H6" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 1">
+                        <input id="btnCoworkCOWORK1H9" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 2">
+                        <input id="btnCowork2COWORK2H4" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 3">
+                        <input id="btnCowork2COWORK2H5" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 4">
+                        <input id="btnCowork2COWORK2H6" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 5">
+                        <input id="btnCowork3COWORK3H4" class="btn btn-bg-negocio-sm btn-sm" type="button" value="+ Baño 6">                            
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- fin leftbar -->
+
+
+    <div class="main-wrapper" style="margin-top: 50px;">
+        <div style="padding-top:10px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <div class="custom-select custom-select-bg-autoconst">
+                            <select id="selTipo" class="input-sm">
+                                <option>Auto-construccion</option>
+                                <!-- Copiar option exportado -->
+                                <option value="2">Constructora - Casa A</option>
+                                <option value="3">Constructora - Casa B</option>
+                                <option value="4">Constructora - Casa C</option>
+                                <option value="5">Constructora - Casa D</option>
+                                <option value="6">Depto A</option>
+                                <option value="7">Depto B</option>
+                                <option value="8">Depto C</option>
+                                <option value='10'>Build - Depto C</option>
+                                <option value='12'>Build - Depto C + Auto</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="custom-select custom-select-bg-tabiq">
+                            <select id="selTabique" class="input-sm">
+                                <option value="a">Tabiqueria Ligera</option>
+                                <option value="b">Tabiqueria Mediana</option>
+                                <option value="c">Tabiqueria Pesada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 custom-input">
+                        <input id="txtFrente" class="form-control input-sm" size="10" type="text" placeholder="Frente (mts)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content container-fluid">
+            <div class="row">
+                    <div class="div-main col-xs-10">
+                        <canvas id="c" width="900" height="400"></canvas>
+                    </div>
+                    
+                    <div class=" col-xs-2">
+                        <div class="bar-right">
+
+                            <div class="chart-rightbar chart-div-green">
+                                <h4 style="text-align: center;"><b>Niveles de corbertura wifi</b></h4>
+                                <div class="title-chart">
+                                    <h5 class="green">Verde</h5>
+                                </div>
+                                <div class="gauge" id="verde-gauge"></div>
+                                <div style="text-align: center; font-weight: bold;"><h5><b>Suficiente para todo tipo de uso*</b></h5></div>
+                                <div class="icons-info-chart">
+                                    <i class="fab fa-youtube" style="color: red;"></i>
+                                    <i class="fas fa-music" style="color: green;"></i>
+                                    <i class="fas fa-video" style="color: orange;"></i>
+                                    <p style="text-align: center;">Sitios web avanzados</p>
+                                </div>
+                                
+                                <div class="media info-state-wifi">
+                                    <div class="media-left">
+                                       <i class="fas fa-check" style="color: green;"></i> 
+                                    </div>
+                                    <div class="media-body">
+                                        <span>Su wifi esta en perfectas condiciones</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chart-rightbar chart-div-yellow">
+                                <div class="title-chart">
+                                    <h5 class="yellow">Amarillo</h5>
+                                </div>
+                                <div class="gauge" id="amarillo-gauge"></div>
+                                <div style="text-align: center; font-weight: bold;"><h5><b>Suficiente solo para demanda baja*</b></h5></div>
+                                <div class="icons-info-chart">
+                                    <i class="fas fa-envelope-square" style="color:#1FA79B;"></i>
+                                    <i class="fab fa-facebook" style="color:#404CA3;"></i>
+                                    <i class="fab fa-twitter" style="color:#56A2DD;"></i>
+                                    <p style="text-align: center;">Sitios web estándares</p>
+                                </div>
+
+                                <div class="media info-state-wifi">
+                                    <div class="media-left">
+                                        <i class="fas fa-exclamation-triangle" style="color: #FFE53B;"></i> 
+                                    </div>
+                                    <div class="media-body">
+                                        <span>Existe riesgo de intermitencia y lentitud</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-rightbar chart-div-gray">                    
+                                <div class="title-chart">
+                                    <h5 class="gray">Gris</h5>
+                                </div>
+                                <div class="gauge" id="gris-gauge"></div>
+                                <div style="text-align: center; font-weight: bold;"><h5><b>Insuficiente para todo uso*</b></h5></div>
+                                <div class="icons-info-chart">
+                                    <p style="text-align: center;">Acceso a internet sera insuficiente</p>
+                                </div>
+                                <div class="media info-state-wifi">
+                                    <div class="media-left">
+                                        <i class="fas fa-exclamation-triangle" style="color: red;"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <span class="warr"> Intermitencia e interrupción del servicio</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-email">
+                Enviar Correo
+            </button>-->
+    <!-- Falta Backend 
+    <div class="modal fade" id="modal-email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ingrese mensaje</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="mailto:" method="post" enctype="text/plain">
+
+                        <div class="form-group">
+                            <label for="input_name">Nombre</label>
+                            <input type="text" class="form-control" id="input_name" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_mail">Correo</label>
+                            <input type="email" class="form-control" id="input_mail" placeholder="Correo">
+                        </div>
+                        
+                        <label>Mensaje</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <br>
+                        <input class="btn btn-success btn-sm" type="submit" value="Enviar">
+                        <input class="btn btn-primary btn-sm" type="reset" value="Borrar">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <script type="text/javascript" src="scr/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="scr/fabric.min.js"></script>
+    <script type="text/javascript" src="scr/FileSaver.min.js"></script>
+    <script type="text/javascript" src="scr/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
+    <script type="text/javascript" src="js/gauge.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript">
+        $(".panel-heading").parent('.panel').hover(
+            function() {
+                $(this).children('.collapse').collapse('show');
+            }, function() {
+                $(this).children('.collapse').collapse('hide');
+            }
+        );
+    </script>
+</body>
+</html>
